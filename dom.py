@@ -37,6 +37,7 @@ airtests= ['莫文蔚','Stefanie Heinzmann','江语晨','郁可唯','Ramzi','Nel
 index = 0
 for aid in artistIds:
 
+
 	url ='http://www.xiami.com/artist/'+aid
 	# url ='http://www.xiami.com/artist/'+'2017'
 	request = urllib2.Request(url)
@@ -51,12 +52,11 @@ for aid in artistIds:
 
 	tables=  soup.find_all('table' ,class_='track_list')
 
-	print airtests[index]
 
 	for t in tables:
 		for tr in t.tbody.children:
 			try:
-				print tr.contents[5].a['href'].encode('utf-8') , tr.contents[5].a.string.encode('utf-8')
+				print 'http://www.xiami.com'+ tr.contents[5].a['href'].encode('utf-8') , tr.contents[5].a.string.encode('utf-8') , '|'+airtests[index]
 			except Exception, e:
 				pass
 
