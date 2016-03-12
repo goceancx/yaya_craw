@@ -1,0 +1,1 @@
+[用python爬虫抓站的一些技巧总结 zz](http://www.pythonclub.org/python-network-application/observer-spider)
